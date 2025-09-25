@@ -1,4 +1,5 @@
 📡 AI-Based-WiFi-Naming-Trap-Detector
+
 📌 Overview
 
 This project implements a Wi-Fi SSID classification system using a pre-trained Machine Learning model and Flask web interface.
