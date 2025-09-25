@@ -13,8 +13,8 @@ It scans available Wi-Fi networks (or allows manual SSID entry), runs them throu
 
 Clone the repository or download the project.
 
-git clone https://github.com/your-username/wifi-fake-ssid-detector.git
-cd wifi-fake-ssid-detector
+git clone (https://github.com/asilzain02/AI-Based-WiFi-Naming-Trap-Detector.git)
+cd AI-Based-WiFi-Naming-Trap-Detector
 
 
 Create and activate a virtual environment (recommended).
@@ -89,4 +89,4 @@ SSID: Free_Coffee_Shop_WiFi → Fake
 
 👨‍💻 Author
 
-Developed by Zain ✨
+Developed by Asil Zain ✨
