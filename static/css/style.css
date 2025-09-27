@@ -1,0 +1,17 @@
+/* Optional extra customizations */
+body {
+  transition: background 0.3s ease;
+}
+
+button:focus {
+  outline: none;
+  ring: 2px solid #facc15;
+}
+
+table th {
+  letter-spacing: 0.5px;
+}
+
+#loader {
+  font-size: 1.1rem;
+}
