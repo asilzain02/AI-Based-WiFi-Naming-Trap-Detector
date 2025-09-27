@@ -1,0 +1,424 @@
+id,ssid,label
+0,xfinitywifi,real
+1,linksys,real
+2,NETGEAR,real
+3,eduroam,real
+4,attwifi,real
+5,BTWiFi-with-FON,real
+6,FreeWifi,real
+7,Home,real
+8,AndroidAP,real
+9,TP-LINK_1234,real
+10,FRITZ!Box 7490,real
+11,UPC WifiSpots,real
+12,Guest,real
+13,HuaWei-5G,real
+14,Belkin.123,real
+15,dlink,real
+16,asus,real
+17,telia,real
+18,VodafoneWiFi,real
+19,Linksys000,real
+20,CISCO-1234,real
+21,TP-LINK_XXXX,real
+22,FreeWifi_secure,real
+23,HomeWiFi,real
+24,MyWiFi,real
+25,OfficeNet,real
+26,CoffeeShopWiFi,real
+27,Airport_Free_WiFi,real
+28,Hotel_WiFi,real
+29,GuestNetwork,real
+30,Campus-WiFi,real
+31,LibraryWiFi,real
+32,ShopifyPOS,real
+33,Linksys1234,real
+34,hpsetup,real
+35,UPC Wi-Free,real
+36,TelenetWiFree,real
+37,BTOpenzone,real
+38,BTWIFI,real
+39,TELENETHOMESPOT,real
+40,cablewifi,real
+41,KPN Fon,real
+42,SFR WiFi Mobile,real
+43,Guest WiFi,real
+44,NETGEAR_EXT,real
+45,TP-LINK_EXT,real
+46,MyHomeNetwork,real
+47,SmithFamilyWiFi,real
+48,Office-Guest,real
+49,Shop_Guest,real
+50,Linksys_5GHz,real
+51,Netgear_2.4,real
+52,FritzBoxGuest,real
+53,TPLinkGuest,real
+54,Charles_Router,real
+55,SmithOfficeWiFi,real
+56,Cafe_Free_WiFi,real
+57,ShopifyGuest,real
+58,My-Printer-Setup,real
+59,FBI Surveillance Van,fake
+60,FBI-VAN-13,fake
+61,Free Public WiFi,fake
+62,PayHereForWiFi,fake
+63,Police Surveillance,fake
+64,VirusDetected_DO_NOT_CONNECT,fake
+65,ClickHereForPassword,fake
+66,BankOfAmerica_Free,fake
+67,Starbucks_WiFi_FREE,fake
+68,FREE_WIFI_NO_LOGIN,fake
+69,PayPal_Secure,fake
+70,Netflix_Free_HQ,fake
+71,ConnectionLost,fake
+72,Windows_Update,fake
+73,Official_Update_Server,fake
+74,Secure_Public_WiFi,fake
+75,Airport_Free_WiFi_IsBack,fake
+76,FreeAirportWiFi,fake
+77,Hotel_Free_WiFi_Payment,fake
+78,Pretty Fly for a Wi-Fi,fake
+79,Drop It Like It's Hotspot,fake
+80,TellMyWiFiLoveHer,fake
+81,Wi-Fight the Feeling,fake
+82,NoInternetAccess,fake
+83,Connect for Free Money,fake
+84,TrustNo1_WIFI,fake
+85,NSA_Surveillance,fake
+86,PayToUse_WiFi,fake
+87,Don'tConnectHere,fake
+88,HackMeIfYouCan,fake
+89,FreeBitcoin_WiFi,fake
+90,ILoveHacking,fake
+91,FakeCCTV_Van,fake
+92,PoliceHotspot,fake
+93,Malware_Update,fake
+94,TrojanHorse_WiFi,fake
+95,Virus_AP,fake
+96,Scammer_WiFi,fake
+97,Netflix_Free_4K,fake
+98,PornHub_WiFi,fake
+99,CryptoMining_AP,fake
+100,Win_Free_Prizes,fake
+101,BankLogin_Free,fake
+102,Amazon_Prime_WiFi,fake
+103,Apple_Update_WiFi,fake
+104,GovernmentSpy_AP,fake
+105,HackersParadise,fake
+106,StealYourData,fake
+107,Router_Password_Free,fake
+108,Connect_And_Pay,fake
+109,StolenData_AP,fake
+110,DarkWeb_WiFi,fake
+111,NoName,ambiguous
+112,<hidden>,ambiguous
+113,_nomap,ambiguous
+114,guest,ambiguous
+115,public,ambiguous
+116,John's iPhone,ambiguous
+117,Galaxy A12,ambiguous
+118,Free-WiFi,ambiguous
+119,welcome,ambiguous
+120,AndroidAP_2,ambiguous
+121,Don't_Steal_My_WiFi,ambiguous
+122,Home-PC,ambiguous
+123,LivingRoom_AP,ambiguous
+124,MyHotspot,ambiguous
+125,WorkLaptop_AP,ambiguous
+126,Guest123,ambiguous
+127,Device_AP,ambiguous
+128,Wifi123,ambiguous
+129,Router1234,ambiguous
+130,Test_AP,ambiguous
+131,SSID,ambiguous
+132,RandomWiFi,ambiguous
+133,TempNetwork,ambiguous
+134,BackupWiFi,ambiguous
+135,SpareRouter,ambiguous
+136,OldRouter_AP,ambiguous
+137,UserHotspot,ambiguous
+138,Office123,ambiguous
+139,PrinterSetup_AP,ambiguous
+140,JohnLaptop_AP,ambiguous
+141,Android_Hotspot,ambiguous
+142,iPhoneHotspot,ambiguous
+143,MobileWiFi,ambiguous
+144,Tablet_AP,ambiguous
+145,Guest_AP,ambiguous
+146,Laptop_AP,ambiguous
+147,Temporary_AP,ambiguous
+148,House_AP,ambiguous
+149,TV_WiFi,ambiguous
+150,SmartHome_AP,ambiguous
+151,Camera_AP,ambiguous
+152,IoT_Device,ambiguous
+153,UnknownNetwork,ambiguous
+154,SSID_2,ambiguous
+155,SSID_3,ambiguous
+156,SSID_Test,ambiguous
+157,Work_AP,ambiguous
+158,TestNetwork,ambiguous
+159,AP123,ambiguous
+160,WiFi_Test,ambiguous
+161,Hotspot_1,ambiguous
+162,Hotspot_2,ambiguous
+163,xfinitywifi_0,real
+164,linksys_1,real
+165,NETGEAR_2,real
+166,eduroam_3,real
+167,attwifi_4,real
+168,BTWiFi-with-FON_5,real
+169,FreeWifi_6,real
+170,Home_7,real
+171,AndroidAP_8,real
+172,TP-LINK_1234_9,real
+173,FRITZ!Box 7490_10,real
+174,UPC WifiSpots_11,real
+175,Guest_12,real
+176,HuaWei-5G_13,real
+177,Belkin.123_14,real
+178,dlink_15,real
+179,asus_16,real
+180,telia_17,real
+181,VodafoneWiFi_18,real
+182,Linksys000_19,real
+183,CISCO-1234_20,real
+184,TP-LINK_XXXX_21,real
+185,FreeWifi_secure_22,real
+186,HomeWiFi_23,real
+187,MyWiFi_24,real
+188,OfficeNet_25,real
+189,CoffeeShopWiFi_26,real
+190,Airport_Free_WiFi_27,real
+191,Hotel_WiFi_28,real
+192,GuestNetwork_29,real
+193,Campus-WiFi_30,real
+194,LibraryWiFi_31,real
+195,ShopifyPOS_32,real
+196,Linksys1234_33,real
+197,hpsetup_34,real
+198,UPC Wi-Free_35,real
+199,TelenetWiFree_36,real
+200,BTOpenzone_37,real
+201,BTWIFI_38,real
+202,TELENETHOMESPOT_39,real
+203,cablewifi_40,real
+204,KPN Fon_41,real
+205,SFR WiFi Mobile_42,real
+206,Guest WiFi_43,real
+207,NETGEAR_EXT_44,real
+208,TP-LINK_EXT_45,real
+209,MyHomeNetwork_46,real
+210,SmithFamilyWiFi_47,real
+211,Office-Guest_48,real
+212,Shop_Guest_49,real
+213,Linksys_5GHz_50,real
+214,Netgear_2.4_51,real
+215,FritzBoxGuest_52,real
+216,TPLinkGuest_53,real
+217,Charles_Router_54,real
+218,SmithOfficeWiFi_55,real
+219,Cafe_Free_WiFi_56,real
+220,ShopifyGuest_57,real
+221,My-Printer-Setup_58,real
+222,xfinitywifi_59,real
+223,linksys_60,real
+224,NETGEAR_61,real
+225,eduroam_62,real
+226,attwifi_63,real
+227,BTWiFi-with-FON_64,real
+228,FreeWifi_65,real
+229,Home_66,real
+230,AndroidAP_67,real
+231,TP-LINK_1234_68,real
+232,FRITZ!Box 7490_69,real
+233,UPC WifiSpots_70,real
+234,Guest_71,real
+235,HuaWei-5G_72,real
+236,Belkin.123_73,real
+237,dlink_74,real
+238,asus_75,real
+239,telia_76,real
+240,VodafoneWiFi_77,real
+241,Linksys000_78,real
+242,CISCO-1234_79,real
+243,TP-LINK_XXXX_80,real
+244,FreeWifi_secure_81,real
+245,HomeWiFi_82,real
+246,MyWiFi_83,real
+247,OfficeNet_84,real
+248,CoffeeShopWiFi_85,real
+249,Airport_Free_WiFi_86,real
+250,Hotel_WiFi_87,real
+251,GuestNetwork_88,real
+252,Campus-WiFi_89,real
+253,LibraryWiFi_90,real
+254,ShopifyPOS_91,real
+255,Linksys1234_92,real
+256,hpsetup_93,real
+257,UPC Wi-Free_94,real
+258,TelenetWiFree_95,real
+259,BTOpenzone_96,real
+260,BTWIFI_97,real
+261,TELENETHOMESPOT_98,real
+262,cablewifi_99,real
+263,FBI Surveillance Van_0,fake
+264,FBI-VAN-13_1,fake
+265,Free Public WiFi_2,fake
+266,PayHereForWiFi_3,fake
+267,Police Surveillance_4,fake
+268,VirusDetected_DO_NOT_CONNECT_5,fake
+269,ClickHereForPassword_6,fake
+270,BankOfAmerica_Free_7,fake
+271,Starbucks_WiFi_FREE_8,fake
+272,FREE_WIFI_NO_LOGIN_9,fake
+273,PayPal_Secure_10,fake
+274,Netflix_Free_HQ_11,fake
+275,ConnectionLost_12,fake
+276,Windows_Update_13,fake
+277,Official_Update_Server_14,fake
+278,Secure_Public_WiFi_15,fake
+279,Airport_Free_WiFi_IsBack_16,fake
+280,FreeAirportWiFi_17,fake
+281,Hotel_Free_WiFi_Payment_18,fake
+282,Pretty Fly for a Wi-Fi_19,fake
+283,Drop It Like It's Hotspot_20,fake
+284,TellMyWiFiLoveHer_21,fake
+285,Wi-Fight the Feeling_22,fake
+286,NoInternetAccess_23,fake
+287,Connect for Free Money_24,fake
+288,TrustNo1_WIFI_25,fake
+289,NSA_Surveillance_26,fake
+290,PayToUse_WiFi_27,fake
+291,Don'tConnectHere_28,fake
+292,HackMeIfYouCan_29,fake
+293,FreeBitcoin_WiFi_30,fake
+294,ILoveHacking_31,fake
+295,FakeCCTV_Van_32,fake
+296,PoliceHotspot_33,fake
+297,Malware_Update_34,fake
+298,TrojanHorse_WiFi_35,fake
+299,Virus_AP_36,fake
+300,Scammer_WiFi_37,fake
+301,Netflix_Free_4K_38,fake
+302,PornHub_WiFi_39,fake
+303,CryptoMining_AP_40,fake
+304,Win_Free_Prizes_41,fake
+305,BankLogin_Free_42,fake
+306,Amazon_Prime_WiFi_43,fake
+307,Apple_Update_WiFi_44,fake
+308,GovernmentSpy_AP_45,fake
+309,HackersParadise_46,fake
+310,StealYourData_47,fake
+311,Router_Password_Free_48,fake
+312,Connect_And_Pay_49,fake
+313,StolenData_AP_50,fake
+314,DarkWeb_WiFi_51,fake
+315,FBI Surveillance Van_52,fake
+316,FBI-VAN-13_53,fake
+317,Free Public WiFi_54,fake
+318,PayHereForWiFi_55,fake
+319,Police Surveillance_56,fake
+320,VirusDetected_DO_NOT_CONNECT_57,fake
+321,ClickHereForPassword_58,fake
+322,BankOfAmerica_Free_59,fake
+323,Starbucks_WiFi_FREE_60,fake
+324,FREE_WIFI_NO_LOGIN_61,fake
+325,PayPal_Secure_62,fake
+326,Netflix_Free_HQ_63,fake
+327,ConnectionLost_64,fake
+328,Windows_Update_65,fake
+329,Official_Update_Server_66,fake
+330,Secure_Public_WiFi_67,fake
+331,Airport_Free_WiFi_IsBack_68,fake
+332,FreeAirportWiFi_69,fake
+333,Hotel_Free_WiFi_Payment_70,fake
+334,Pretty Fly for a Wi-Fi_71,fake
+335,Drop It Like It's Hotspot_72,fake
+336,TellMyWiFiLoveHer_73,fake
+337,Wi-Fight the Feeling_74,fake
+338,NoInternetAccess_75,fake
+339,Connect for Free Money_76,fake
+340,TrustNo1_WIFI_77,fake
+341,NSA_Surveillance_78,fake
+342,PayToUse_WiFi_79,fake
+343,NoName_0,ambiguous
+344,<hidden>_1,ambiguous
+345,_nomap_2,ambiguous
+346,guest_3,ambiguous
+347,public_4,ambiguous
+348,John's iPhone_5,ambiguous
+349,Galaxy A12_6,ambiguous
+350,Free-WiFi_7,ambiguous
+351,welcome_8,ambiguous
+352,AndroidAP_2_9,ambiguous
+353,Don't_Steal_My_WiFi_10,ambiguous
+354,Home-PC_11,ambiguous
+355,LivingRoom_AP_12,ambiguous
+356,MyHotspot_13,ambiguous
+357,WorkLaptop_AP_14,ambiguous
+358,Guest123_15,ambiguous
+359,Device_AP_16,ambiguous
+360,Wifi123_17,ambiguous
+361,Router1234_18,ambiguous
+362,Test_AP_19,ambiguous
+363,SSID_20,ambiguous
+364,RandomWiFi_21,ambiguous
+365,TempNetwork_22,ambiguous
+366,BackupWiFi_23,ambiguous
+367,SpareRouter_24,ambiguous
+368,OldRouter_AP_25,ambiguous
+369,UserHotspot_26,ambiguous
+370,Office123_27,ambiguous
+371,PrinterSetup_AP_28,ambiguous
+372,JohnLaptop_AP_29,ambiguous
+373,Android_Hotspot_30,ambiguous
+374,iPhoneHotspot_31,ambiguous
+375,MobileWiFi_32,ambiguous
+376,Tablet_AP_33,ambiguous
+377,Guest_AP_34,ambiguous
+378,Laptop_AP_35,ambiguous
+379,Temporary_AP_36,ambiguous
+380,House_AP_37,ambiguous
+381,TV_WiFi_38,ambiguous
+382,SmartHome_AP_39,ambiguous
+383,Camera_AP_40,ambiguous
+384,IoT_Device_41,ambiguous
+385,UnknownNetwork_42,ambiguous
+386,SSID_2_43,ambiguous
+387,SSID_3_44,ambiguous
+388,SSID_Test_45,ambiguous
+389,Work_AP_46,ambiguous
+390,TestNetwork_47,ambiguous
+391,AP123_48,ambiguous
+392,WiFi_Test_49,ambiguous
+393,Hotspot_1_50,ambiguous
+394,Hotspot_2_51,ambiguous
+395,NoName_52,ambiguous
+396,<hidden>_53,ambiguous
+397,_nomap_54,ambiguous
+398,guest_55,ambiguous
+399,public_56,ambiguous
+400,John's iPhone_57,ambiguous
+401,Galaxy A12_58,ambiguous
+402,Free-WiFi_59,ambiguous
+403,welcome_60,ambiguous
+404,AndroidAP_2_61,ambiguous
+405,Don't_Steal_My_WiFi_62,ambiguous
+406,Home-PC_63,ambiguous
+407,LivingRoom_AP_64,ambiguous
+408,MyHotspot_65,ambiguous
+409,WorkLaptop_AP_66,ambiguous
+410,Guest123_67,ambiguous
+411,Device_AP_68,ambiguous
+412,Wifi123_69,ambiguous
+413,Router1234_70,ambiguous
+414,Test_AP_71,ambiguous
+415,SSID_72,ambiguous
+416,RandomWiFi_73,ambiguous
+417,TempNetwork_74,ambiguous
+418,BackupWiFi_75,ambiguous
+419,SpareRouter_76,ambiguous
+420,OldRouter_AP_77,ambiguous
+421,UserHotspot_78,ambiguous
+422,Office123_79,ambiguous

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -116,3 +117,43 @@ setInterval(fetchNetworks, 10000);
 
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wi-Fi Fake/Real Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Wi-Fi Fake/Real Predictor</h1>
+
+        <form method="POST">
+            <input type="text" name="manual_ssid" placeholder="Enter SSID manually">
+            <button type="submit">Predict</button>
+        </form>
+
+        <form method="POST">
+            <input type="hidden" name="scan_wifi" value="1">
+            <button type="submit">Scan & Predict Nearby Wi-Fi</button>
+        </form>
+
+        {% if predictions %}
+        <h2>Results:</h2>
+        <table>
+            <tr>
+                <th>SSID</th>
+                <th>Prediction</th>
+            </tr>
+            {% for ssid, label in predictions %}
+            <tr>
+                <td>{{ ssid }}</td>
+                <td class="{{ 'real' if label=='real' else 'fake' }}">{{ label|capitalize }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% endif %}
+    </div>
+</body>
+</html>
+>>>>>>> 0148a2a6a0a36b9113dc8283fcf85e810dd4c326

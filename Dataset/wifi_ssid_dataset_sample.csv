@@ -1,0 +1,100 @@
+id,ssid,label,reason,source
+0,xfinitywifi,real,Common ISP hotspot (Xfinity),gist/wigle
+1,linksys,real,Default router SSID from Linksys,gist/wigle
+2,NETGEAR,real,Default NETGEAR SSID,gist/wigle
+3,eduroam,real,Eduroam institutional Wi-Fi,gist/wigle
+4,attwifi,real,ISP hotspot (AT&T),gist/wigle
+5,BTWiFi-with-FON,real,BT/ Fon hotspot,gist/wigle
+6,FreeWifi,real,Generic public hotspot name,gist/wigle
+7,Home,real,User-set home network,common
+8,AndroidAP,real,Android mobile hotspot default,gist/wigle
+9,TP-LINK_1234,real,Typical TP-LINK default style,common
+10,FRITZ!Box 7490,real,German Fritzbox default name,gist/wigle
+11,UPC WifiSpots,real,ISP hotspot,gist/wigle
+12,Guest,real,Common guest network name,common
+13,HuaWei-5G,real,Manufacturer-derived SSID,common
+14,Belkin.123,real,Belkin default style,common
+15,dlink,real,D-Link default SSID,gist/wigle
+16,asus,real,Asus default SSID,gist/wigle
+17,telia,real,ISP hotspot (Telia),common
+18,VodafoneWiFi,real,ISP hotspot (Vodafone),common
+19,Linksys000,real,Linksys-like SSID,common
+20,CISCO-1234,real,Enterprise/consumer Cisco device SSID style,common
+21,TP-LINK_XXXX,real,TP-LINK default pattern,common
+22,FreeWifi_secure,real,Public hotspot variant,gist/wigle
+23,HomeWiFi,real,User set home SSID,common
+24,MyWiFi,real,User set SSID,common
+25,OfficeNet,real,Likely office network,common
+26,CoffeeShopWiFi,real,Business hotspot,common
+27,Airport_Free_WiFi,real,Public hotspot at airport,common
+28,Hotel_WiFi,real,Hotel network naming,common
+29,GuestNetwork,real,Guest network,common
+30,Campus-WiFi,real,University network,common
+31,LibraryWiFi,real,Public library network,common
+32,ShopifyPOS,real,Retail POS network (possible vendor device),common
+33,Linksys1234,real,Linksys default variant,common
+34,NoName,ambiguous,Could be empty/default or user name,common
+35,<hidden>,ambiguous,Hidden SSID placeholder,common
+36,_nomap,ambiguous,Devices opting out of location services,common
+37,guest,ambiguous,Generic guest SSID,common
+38,public,ambiguous,Generic public SSID,common
+39,FBI Surveillance Van,fake,Prank or attention-grabbing SSID,community
+40,FBI-VAN-13,fake,Prank/deceptive SSID,community
+41,Free Public WiFi,fake,Could be an evil-twin hotspot (deceptive),analysis
+42,PayHereForWiFi,fake,Suspicious (may prompt payment or phishing),analysis
+43,Police Surveillance,fake,Attention-grabbing/prank,community
+44,VirusDetected_DO_NOT_CONNECT,fake,"Deceptive, designed to scare users",community
+45,ClickHereForPassword,fake,Deceptive SSID to trick users,community
+46,BankOfAmerica_Free,fake,Deceptive; impersonation risk,community
+47,Starbucks_WiFi_FREE,fake,Impersonation of known brand,analysis
+48,FREE_WIFI_NO_LOGIN,fake,Often used for malicious/easy targets,analysis
+49,PayPal_Secure,fake,Impersonation attempt,community
+50,Netflix_Free_HQ,fake,Deceptive promotional lure,community
+51,ConnectionLost,fake,Trick SSID causing user confusion,community
+52,Windows_Update,fake,Deceptive to prompt connection,community
+53,Official_Update_Server,fake,Deceptive naming,community
+54,Secure_Public_WiFi,fake,Generic deceptive label,analysis
+55,Airport_Free_WiFi_IsBack,fake,Impersonation/duplicate hotspot,community
+56,FreeAirportWiFi,fake,Possible evil-twin hotspot,analysis
+57,Hotel_Free_WiFi_Payment,fake,Deceptive billing impulse,analysis
+58,John's iPhone,ambiguous,Could be legitimate personal hotspot,common
+59,Galaxy A12,ambiguous,Mobile hotspot default,common
+60,hpsetup,real,Printer setup SSID often seen when printers create APs,gist/wigle
+61,UPC Wi-Free,real,ISP name variant,gist/wigle
+62,TelenetWiFree,real,ISP hotspot,gist/wigle
+63,BTOpenzone,real,ISP hotspot,gist/wigle
+64,BTWIFI,real,BT hotspot variant,gist/wigle
+65,TELENETHOMESPOT,real,ISP hotspot,gist/wigle
+66,cablewifi,real,Cable ISP hotspot,gist/wigle
+67,KPN Fon,real,ISP Fon network,gist/wigle
+68,SFR WiFi Mobile,real,ISP hotspot (France),gist/wigle
+69,UPC Wi-Free,real,ISP hotspot duplicate example,gist/wigle
+70,Guest WiFi,real,Common guest SSID,common
+71,NETGEAR_EXT,real,Range extender default SSID,common
+72,TP-LINK_EXT,real,Extender SSID,common
+73,MyHomeNetwork,real,User chosen,common
+74,SmithFamilyWiFi,real,User chosen home SSID,common
+75,Office-Guest,real,Guest SSID at office,common
+76,Shop_Guest,real,Retail guest network,common
+77,Free-WiFi,ambiguous,Could be legitimate but often used deceptively,analysis
+78,welcome,ambiguous,Generic SSID could be benign or trap,common
+79,My-Printer-Setup,real,Printer AP name,common
+80,AndroidAP_2,ambiguous,Mobile hotspot variant,common
+81,Linksys_5GHz,real,5GHz router SSID variant,common
+82,Netgear_2.4,real,2.4GHz band SSID variant,common
+83,FritzBoxGuest,real,FritzBox guest network variant,common
+84,TPLinkGuest,real,Guest variant,common
+85,Charles_Router,real,Personal router name,common
+86,SmithOfficeWiFi,real,Office SSID sample,common
+87,Cafe_Free_WiFi,real,Coffee shop hotspot,common
+88,ShopifyGuest,real,Retail hotspot,common
+89,Pretty Fly for a Wi-Fi,fake,"Joke SSID, likely not an official hotspot",community
+90,Drop It Like It's Hotspot,fake,Joke SSID,community
+91,TellMyWiFiLoveHer,fake,Joke SSID,community
+92,Wi-Fight the Feeling,fake,Joke SSID,community
+93,NoInternetAccess,fake,Trick to dissuade connections,community
+94,Connect for Free Money,fake,Deceptive lure,analysis
+95,TrustNo1_WIFI,fake,Suspicious naming,community
+96,NSA_Surveillance,fake,Prank/deceptive name,community
+97,Don't_Steal_My_WiFi,ambiguous,User-warning SSID,common
+98,PayToUse_WiFi,fake,Deceptive paid hotspot label,analysis
