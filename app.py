@@ -29,26 +29,17 @@ except:
 
 # === Wi-Fi Scanner for pywifi (Windows only) ===
 def scan_wifi_networks():
-    wifi = pywifi.PyWiFi()
-    iface = wifi.interfaces()[0]
-    iface.scan()
-    time.sleep(5)
-    scan_results = iface.scan_results()
+    try:
+        wifi = pywifi.PyWiFi()
+        iface = wifi.interfaces()[0]
+        iface.scan()
+        time.sleep(5)
+        scan_results = iface.scan_results()
+    except Exception as e:
+        print("Wi-Fi scan unavailable:", e)
+        scan_results = []
+    return scan_results
 
-    networks = []
-    for net in scan_results:
-        if net.akm:
-            auth = "WPA2" if const.AKM_TYPE_WPA2PSK in net.akm else "WPA3" if const.AKM_TYPE_WPA3 in net.akm else "Open"
-        else:
-            auth = "Open"
-        networks.append({
-            "SSID": net.ssid,
-            "BSSID": net.bssid,
-            "RSSI": net.signal,
-            "Auth": auth,
-            "Channel": net.freq // 5
-        })
-    return networks
 
 
 # === Predict Real/Fake Networks ===
