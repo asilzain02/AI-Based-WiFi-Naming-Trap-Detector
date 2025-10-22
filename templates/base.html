@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wi-Fi Fake/Real Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Header -->
+    <header class="bg-blue-800 text-white p-4 shadow">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">🔍 Wi-Fi Fake/Real Detector</h1>
+            <button id="scan-btn" class="bg-yellow-400 text-black px-4 py-2 rounded hover:bg-yellow-500 transition">Scan Networks</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto mt-8">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-12 p-4 bg-blue-800 text-white text-center">
+        &copy; 2025 Wi-Fi Detector | Built with Flask & Python
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
