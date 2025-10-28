@@ -29,20 +29,29 @@ except:
 
 # === Wi-Fi Scanner for pywifi (Windows only) ===
 def scan_wifi_networks():
-    try:
-        wifi = pywifi.PyWiFi()
-        iface = wifi.interfaces()[0]
-        iface.scan()
-        time.sleep(5)
-        scan_results = iface.scan_results()
-    except Exception as e:
-        print("Wi-Fi scan unavailable:", e)
-        scan_results = []
-    return scan_results
+    wifi = pywifi.PyWiFi()
+    iface = wifi.interfaces()[0]
+    iface.scan()
+    time.sleep(5)
+    scan_results = iface.scan_results()
+
+    networks = []
+    for net in scan_results:
+        if net.akm:
+            auth = "WPA2" if const.AKM_TYPE_WPA2PSK in net.akm else "WPA3" if const.AKM_TYPE_WPA3 in net.akm else "Open"
+        else:
+            auth = "Open"
+        networks.append({
+            "SSID": net.ssid,
+            "BSSID": net.bssid,
+            "RSSI": net.signal,
+            "Auth": auth,
+            "Channel": net.freq // 5
+        })
+    return networks
 
 
-
-# === Predict Real/Fake Networks ===
+# === Predict Real/Fake Networks (Full feature pipeline) ===
 def predict_networks(networks):
     if not networks or not pipeline:
         return []
@@ -88,13 +97,18 @@ def scan_wifi_cross_platform():
     return list(dict.fromkeys(ssids))
 
 
-# === Predict SSIDs ===
-def predict_ssids(ssids):
+# === Predict SSIDs or SSID+BSSID (Vectorizer model) ===
+def predict_ssids(ssid_bssid_pairs):
+    """
+    ssid_bssid_pairs: list of tuples/lists like [(SSID, BSSID), ...]
+    Combines SSID and BSSID into a single string for vectorization.
+    """
     if not clf or not vectorizer:
         return []
-    X = vectorizer.transform(ssids)
+    combined_inputs = [f"{ssid} {bssid}" for ssid, bssid in ssid_bssid_pairs]
+    X = vectorizer.transform(combined_inputs)
     preds = clf.predict(X)
-    return list(zip(ssids, preds))
+    return list(zip(ssid_bssid_pairs, preds))
 
 
 # === ROUTES ===
@@ -103,13 +117,18 @@ def predict_ssids(ssids):
 def index():
     prediction_results = []
     if request.method == "POST":
-        if request.form.get("manual_ssid"):
-            ssid = request.form["manual_ssid"]
-            pred = predict_ssids([ssid])[0][1]
-            prediction_results.append((ssid, pred))
+        # Manual prediction (SSID + BSSID)
+        if request.form.get("manual_ssid") and request.form.get("manual_bssid"):
+            ssid = request.form["manual_ssid"].strip()
+            bssid = request.form["manual_bssid"].strip()
+            pred = predict_ssids([(ssid, bssid)])[0][1]
+            prediction_results.append(((ssid, bssid), pred))
+
+        # Scan Wi-Fi (SSID-only fallback)
         elif request.form.get("scan_wifi"):
             ssids = scan_wifi_cross_platform()
             prediction_results = predict_ssids(ssids)
+
     return render_template("index.html", predictions=prediction_results)
 
 

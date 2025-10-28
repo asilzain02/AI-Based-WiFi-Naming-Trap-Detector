@@ -18,13 +18,13 @@
     <!-- Main Content -->
     <main class="container mx-auto mt-8">
         {% block content %}{% endblock %}
+        <script src="{{ url_for('static', filename='js/main.js') }}"></script>
     </main>
 
     <!-- Footer -->
+    
     <footer class="mt-12 p-4 bg-blue-800 text-white text-center">
         &copy; 2025 Wi-Fi Detector | Built with Flask & Python
     </footer>
-
-    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 </html>

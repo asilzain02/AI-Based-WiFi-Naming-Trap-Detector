@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +12,7 @@
         .rssi-bar { display: inline-block; width: 5px; height: 15px; margin-right: 1px; border-radius: 1px; transition: height 0.5s, background-color 0.5s; }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100">
+<body class="bg-gray-900 text-black">
 
 <!-- Header -->
 <header class="bg-gradient-to-r from-indigo-800 to-purple-800 shadow p-4 flex justify-between items-center">
@@ -23,9 +22,19 @@
     </button>
 </header>
 
+<!-- Manual Input Form -->
+<section class="container mx-auto mt-6 p-6 bg-gray-800 rounded shadow text-gray-100">
+    <h2 class="text-xl font-bold mb-4">🔍 Manual SSID + BSSID Prediction</h2>
+    <form method="POST" class="grid md:grid-cols-3 gap-4">
+        <input type="text" name="manual_ssid" placeholder="Enter SSID" required class="p-2 rounded text-black">
+        <input type="text" name="manual_bssid" placeholder="Enter BSSID (e.g., 00:1A:2B:3C:4D:5E)" required class="p-2 rounded text-black">
+        <button type="submit" class="bg-green-500 hover:bg-green-400 px-4 py-2 rounded font-semibold transition">Predict</button>
+    </form>
+</section>
+
 <!-- Summary Metrics -->
 <section class="container mx-auto mt-6 grid grid-cols-1 md:grid-cols-4 gap-4 text-gray-900">
-    <div class="bg-gray-800 p-4 rounded shadow text-center">
+    <div class="bg-gray-800 p-4 rounded shadow text-center text-gray-100">
         <p class="text-sm">Total Networks</p>
         <p id="total" class="text-2xl font-bold">0</p>
     </div>
@@ -43,8 +52,33 @@
     </div>
 </section>
 
-<!-- Network Cards -->
-<main class="container mx-auto mt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="card-view"></main>
+<!-- Predictions Table -->
+{% if predictions %}
+<section class="container mx-auto mt-8 bg-gray-800 p-6 rounded text-gray-100">
+    <h2 class="text-xl font-bold mb-4">📡 Prediction Results</h2>
+    <table class="min-w-full border border-gray-700 rounded text-center">
+        <thead class="bg-gray-700">
+            <tr>
+                <th class="px-4 py-2">SSID</th>
+                <th class="px-4 py-2">BSSID</th>
+                <th class="px-4 py-2">Prediction</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for (ssid, bssid), label in predictions %}
+            <tr class="border-t border-gray-700">
+                <td class="px-4 py-2">{{ ssid }}</td>
+                <td class="px-4 py-2">{{ bssid }}</td>
+                <td class="px-4 py-2 font-bold {{ 'text-green-400' if label=='real' else 'text-red-400' }}">{{ label|capitalize }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</section>
+{% endif %}
+
+<!-- Network Cards (Auto Scan) -->
+<main class="container mx-auto mt-6 grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-white"  id="card-view"></main>
 
 <!-- Footer -->
 <footer class="mt-12 p-4 bg-gradient-to-r from-indigo-800 to-purple-800 text-center text-gray-100">
@@ -59,7 +93,6 @@ const realEl = document.getElementById('real');
 const fakeEl = document.getElementById('fake');
 const strongestEl = document.getElementById('strongest');
 
-// Function to render RSSI bars
 function getRssiBars(rssi) {
     const bars = [];
     for (let i=0;i<5;i++){
@@ -70,12 +103,11 @@ function getRssiBars(rssi) {
     return bars.join('');
 }
 
-// Render networks
 function renderNetworks(networks) {
     cardView.innerHTML = '';
     networks.forEach(n => {
         const card = document.createElement('div');
-        card.className = `glow-card bg-gray-800 p-4 rounded shadow transition relative border-l-4 ${n.prediction_class==='real'?'border-green-500':'border-red-500'}`;
+        card.className = `glow-card bg-gray-800 p-4 rounded shadow border-l-4 ${n.prediction_class==='real'?'border-green-500':'border-red-500'}`;
         card.innerHTML = `
             <h2 class="text-xl font-bold mb-2">${n.SSID || 'Unknown'}</h2>
             <p class="text-sm mb-1">BSSID: ${n.BSSID}</p>
@@ -88,7 +120,6 @@ function renderNetworks(networks) {
     });
 }
 
-// Update summary metrics
 function updateSummary(summary){
     totalEl.textContent = summary.total;
     realEl.textContent = summary.real;
@@ -96,64 +127,25 @@ function updateSummary(summary){
     strongestEl.textContent = summary.strongest.SSID || 'N/A';
 }
 
-// Fetch networks from backend
 async function fetchNetworks() {
     try {
         const res = await fetch('/api/scan');
         const data = await res.json();
-        renderNetworks(data.networks);
-        updateSummary(data.summary);
+        if (data && data.networks && data.networks.length > 0) {
+            renderNetworks(data.networks);
+            updateSummary(data.summary);
+        } else {
+            cardView.innerHTML = '<p class="text-gray-300 text-center col-span-full">⚠️ No networks found. Try again.</p>';
+            updateSummary({ total: 0, real: 0, fake: 0, strongest: {} });
+        }
     } catch(err){
         console.error(err);
     }
 }
 
-// Scan button
 scanBtn.addEventListener('click', fetchNetworks);
-
-// Auto-refresh every 10 seconds
 setInterval(fetchNetworks, 10000);
 </script>
 
 </body>
 </html>
-=======
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Wi-Fi Fake/Real Predictor</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
-    <div class="container">
-        <h1>Wi-Fi Fake/Real Predictor</h1>
-
-        <form method="POST">
-            <input type="text" name="manual_ssid" placeholder="Enter SSID manually">
-            <button type="submit">Predict</button>
-        </form>
-
-        <form method="POST">
-            <input type="hidden" name="scan_wifi" value="1">
-            <button type="submit">Scan & Predict Nearby Wi-Fi</button>
-        </form>
-
-        {% if predictions %}
-        <h2>Results:</h2>
-        <table>
-            <tr>
-                <th>SSID</th>
-                <th>Prediction</th>
-            </tr>
-            {% for ssid, label in predictions %}
-            <tr>
-                <td>{{ ssid }}</td>
-                <td class="{{ 'real' if label=='real' else 'fake' }}">{{ label|capitalize }}</td>
-            </tr>
-            {% endfor %}
-        </table>
-        {% endif %}
-    </div>
-</body>
-</html>
->>>>>>> 0148a2a6a0a36b9113dc8283fcf85e810dd4c326
